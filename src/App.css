@@ -1,53 +1,118 @@
-:root {
-    --clr-primary: #ee6352;
-    --clr-dark: #333;
-    --clr-neutral: #ddd;
-    --clr-light: #fff;
+@media only screen and (max-width: 640px) {
+    .logo { display: none; }
+
+    .nav {
+        background: var(--clr-light);
+        position: fixed;
+        right: 0;
+        box-shadow: 0 0 3em rgba(0,0,0,.15);
+        transform: translateY(-95%);
+        transition: transform 300ms;
+        width: 100vw;
+    }
+
+    .nav__toggle {
+        z-index: 2;
+        background-color: var(--clr-dark);
+        border: none;
+        left: 0;
+        padding: 2em .5em;
+        position: absolute;
+        width: 100vw;
+    }
+}
+
+@media only screen and (min-width: 641px) and (max-width: 1000px) {
+    .nav {
+        /* background: var(--clr-light); */
+        position: fixed;
+        right: 0;
+        box-shadow: 0 0 3em rgba(0,0,0,.15);
+        transform: translateY(-95%);
+        transition: transform 300ms;
+        width: 100vw;
+    }
+
+    .nav__toggle {
+        /* position: absolute; */
+        /* top: 2em; */
+        /* left: 0; */
+        transform: translateX(-100%);
+        /* background: var(--clr-light); */
+        padding: 1em .5em;
+        border: 0;
+        border-radius: .25em 0 0 .25em;
+    }
+}
+
+@media only screen and (min-width: 1001px) {
+    .logo { display: none; }
+
+    .nav__toggle {
+        /* position: absolute; */
+        /* top: 2em; */
+        /* left: 0; */
+        transform: translateX(-100%);
+        /* background: var(--clr-light); */
+        padding: 1em .5em;
+        border: 0;
+        border-radius: .25em 0 0 .25em;
+    }
 }
 
 body {
     font-family: basic-sans, sans-serif;
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-size: 1.125em;
     line-height: 1.6;
     color: var(--clr-body);
-    background: var(--clr-neutral);
+    background: var(--clr-dark);
     overflow-x: hidden;
+}
+
+:root {
+    --clr-primary: dodgerblue;
+    --clr-dark: #660000;
+    --clr-neutral: lightblue;
+    --clr-light: #eee;
 }
 
 a { color: var(--clr-primary); }
 
-.content {
-    background: var(--clr-light);
-    width: 70vw;
-    padding: 3em;
-    box-shadow: 0 0 3em rgba(0,0,0,.15);
+.App {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
 }
 
-.nav {
+.header {
+
+}
+
+.content {
     background: var(--clr-light);
-    position: absolute;
-    right: 0;
-    box-shadow: 0 0 3em rgba(0,0,0,.15);
-    transform: translateX(100%);
-    transition: transform 300ms cubic-bezier(.5, 0, .5, 1)
+    padding: 3em;
+    width: 70vw;
+}
+
+.footer {
+    color: var(--clr-light);
+    font-size: 0.75em;
 }
 
 .nav__list {
     list-style: none;
     margin: 0;
-    padding: 0;
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    padding: 3em 6em;
+    height: 80vh;
+    padding: 1em 3.4em;
 }
 
 .nav__item {
-    margin-bottom: 3em;
+    margin-bottom: 1.5em;
 }
 
 .nav__link {
@@ -56,47 +121,35 @@ a { color: var(--clr-primary); }
 }
 
 .nav__link:hover {
-    text-decoration: underline;
     color: var(--clr-primary);
 }
 
-.nav__toggle {
-    position: absolute;
-    top: 2em;
-    left: 0;
-    transform: translateX(-100%);
-    background: var(--clr-light);
-    padding: 1em .5em;
-    border: 0;
-    border-radius: .25em 0 0 .25em;
-}
-
-.menu {
+.nav__button {
     display: block;
-    position: relative;
+    position: fixed;
   }
 
-.menu,
-.menu::before,
-.menu::after {
+.nav__button,
+.nav__button::before,
+.nav__button::after {
     width: 2em;
     height: 3px;
-    background: var(--clr-dark);
+    background: var(--clr-light);
 
     transition: transform 350ms ease-in-out, opacity 200ms linear;
 }
 
-.menu::before,
-.menu::after {
+.nav__button::before,
+.nav__button::after {
     content: '';
     position: absolute;
     left: 0;
 }
 
-.menu::before { bottom: 6px; }
-.menu::after { top: 6px;}
+.nav__button::before { bottom: 6px; }
+.nav__button::after { top: 6px;}
 
-.nav-open .nav { transform: translateX(0); }
-.nav-open .menu { transform: rotate(45deg); }
-.nav-open .menu::before { opacity: 0; }
-.nav-open .menu::after { transform: rotate(90deg) translate(-6px); }
+.nav-open .nav { transform: translateY(7%); }
+.nav-open .nav__button { transform: rotate(45deg); }
+.nav-open .nav__button::before { opacity: 0; }
+.nav-open .nav__button::after { transform: rotate(90deg) translate(-6px); }
