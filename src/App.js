@@ -16,9 +16,9 @@ function App() {
             <header className="header">
                 <button className="nav__toggle" onClick={ () => {
                         document.body.classList.toggle('nav-open'); }}>
-                        <span className="nav__button"></span>
+                        <span className="nav__icon"></span>
                 </button>
-                <nav className="nav">
+                <nav className="nav__menu">
                     <ul className="nav__list">
                         <li className="nav__item">
                             <a className="nav__link" href="https://jgreenwd.github.io/musician-cards">Musician Cards Project</a>

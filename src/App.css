@@ -1,71 +1,12 @@
-@media only screen and (max-width: 640px) {
-    .logo { display: none; }
-
-    .nav {
-        height: 45%;
-        transform: translateY(-140%);
-    }
-
-    .nav__button,
-    .nav__button::before,
-    .nav__button::after {
-        background: var(--clr-light);
-        height: 3px;
-        width: 2em;
-
-        transition: transform 350ms ease-in-out, opacity 200ms linear;
-    }
-
-    .nav__button::before { bottom: 6px; }
-    .nav__button::after { top: 6px;}
-    .nav-open .nav__button::after { transform: rotate(90deg) translate(-5px); }
+/* define global color values to use throughout app */
+:root {
+    --clr-primary: dodgerblue;
+    --clr-dark: black;
+    --clr-neutral: grey;
+    --clr-light: #eee;
 }
 
-@media only screen and (min-width: 641px) and (max-width: 1000px) {
-    .content {
-        margin-top: 70px;
-    }
-
-    .nav {
-        height: 25%;
-        margin-top: 10px;
-        transform: translateY(-110%);
-    }
-
-    .nav__toggle {
-        margin-left: 10px;
-    }
-
-    .nav__button,
-    .nav__button::before,
-    .nav__button::after {
-        background: var(--clr-light);
-        height: 5px;
-        width: 3em;
-
-        transition: transform 350ms ease-in-out, opacity 200ms linear;
-    }
-
-    .nav__button::before { bottom: 10px; }
-    .nav__button::after { top: 10px;}
-    .nav-open .nav__button::after { transform: rotate(90deg) translate(-9px); }
-}
-
-@media only screen and (min-width: 1001px) {
-    .logo { display: none; }
-
-    .nav__toggle {
-        /* position: absolute; */
-        /* top: 2em; */
-        /* left: 0; */
-        transform: translateX(-100%);
-        /* background: var(--clr-light); */
-        padding: 1em .5em;
-        border: 0;
-        border-radius: .25em 0 0 .25em;
-    }
-}
-
+/* define global styling values */
 body {
     font: 1.125em basic-cans, sans-serif;
     min-height: 100vh;
@@ -75,46 +16,91 @@ body {
     overflow-x: hidden;
 }
 
-:root {
-    --clr-primary: dodgerblue;
-    --clr-dark: black;
-    --clr-neutral: grey;
-    --clr-light: #eee;
-}
-
 a { color: var(--clr-primary); }
 
+/* define media queries for resolutions: <640px, 640-1000px, >1000px */
+@media only screen and (max-width: 639px) {
+    .nav__icon,
+    .nav__icon::before,
+    .nav__icon::after {
+        height: 3px;
+        width: 2em;
+    }
+
+    .nav__icon::before { bottom: 6px; }
+    .nav__icon::after { top: 6px;}
+    .nav-open .nav__icon::after { transform: rotate(90deg) translate(-6px); }
+
+    .nav__menu {
+        transform: translateY(-150%);
+        width: 100%;
+    }
+
+    .logo { display: none; }
+}
+
+@media only screen and (min-width: 640px) and (max-width: 1000px) {
+    .nav__icon,
+    .nav__icon::before,
+    .nav__icon::after {
+        height: 5px;
+        width: 3em;
+    }
+
+    .nav__icon::before { bottom: 10px; }
+    .nav__icon::after { top: 10px;}
+    .nav-open .nav__icon::after { transform: rotate(90deg) translate(-10px); }
+
+    .nav__menu {
+        margin-top: 10px;
+        transform: translateY(-110%);
+        width: 100%;
+    }
+
+    .content {
+        margin-top: 70px;
+    }
+}
+
+@media only screen and (min-width: 1001px) {
+    .nav__toggle { margin-left: 30px; }
+
+    .nav__icon,
+    .nav__icon::before,
+    .nav__icon::after {
+        left: 20px;
+        height: 5px;
+        width: 3em;
+    }
+
+    .nav__icon::before { bottom: 10px; }
+    .nav__icon::after { top: 10px;}
+    .nav-open .nav__icon::after { transform: rotate(90deg) translate(-10px); }
+
+    .nav__menu {
+        transform: translateY(-110%);
+        max-width:825px;
+        left: 5%;
+    }
+
+    .content {
+        margin-top: 70px;
+        max-width: 800px;
+    }
+
+}
+
+/* define React App container values */
 .App {
+    align-items: center;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    align-items: center;
     max-width: 1000px;
+    margin: 0 auto;
 }
 
-.header {
-    background-color: var(--clr-dark);
-    width: 100vw;
-}
-
-.nav {
-    background: var(--clr-light);
-    box-shadow: 0 0 3em rgba(0,0,0,.15);
-    position: fixed;
-    right: 0;
-    transition: transform 300ms;
-    width: 100%;
-}
-
-.nav__toggle {
-    background-color: var(--clr-dark);
-    border: none;
-    left: 0;
-    padding: 2em .5em;
-    position: absolute;
-    width: 100vw;
-    z-index: 1;
-}
+.header { width: 100vw; }
 
 .content {
     background: var(--clr-light);
@@ -123,10 +109,48 @@ a { color: var(--clr-primary); }
 }
 
 .footer {
-    text-align: center;
-    margin-top: 30px;
     color: var(--clr-light);
     font-size: 0.75em;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.logo { max-height: 90px; }
+
+/* ----- nav bar hamburger button ----- */
+.nav__icon {
+    background-color: var(--clr-primary);
+    display: block;
+    position: fixed;
+    transition: transform 350ms ease-in-out, opacity 200ms linear;
+}
+
+.nav__icon::before,
+.nav__icon::after {
+    background-color: var(--clr-primary);
+    content: '';
+    position: absolute;
+    left: 0;
+    transition: transform 350ms ease-in-out, opacity 200ms linear;
+}
+
+.nav__toggle {
+    background: none;
+    border: none;
+    padding: 2em .5em;
+    position: absolute;
+    z-index: 1;
+}
+/* ------------------------------------ */
+
+
+/* ------ drop-down menu contents ------ */
+.nav__menu {
+    background: var(--clr-light);
+    box-shadow: 0 0 3em rgba(0,0,0,.15);
+    height: 250px;
+    position: fixed;
+    transition: transform 300ms;
 }
 
 .nav__list {
@@ -134,36 +158,21 @@ a { color: var(--clr-primary); }
     margin: 0;
     display: flex;
     flex-direction: column;
-    height: 80vh;
     padding: 1em 3.4em;
 }
 
-.nav__item {
-    margin-bottom: 1.5em;
-}
+.nav__item { margin-bottom: 1.5em; }
 
 .nav__link {
     text-decoration: none;
     color: var(--clr-dark);
 }
 
-.nav__link:hover {
-    color: var(--clr-primary);
-}
+.nav__link:hover { color: var(--clr-primary); }
+/* ------------------------------------ */
 
-.nav__button {
-    display: block;
-    position: fixed;
-  }
-
-
-.nav__button::before,
-.nav__button::after {
-    content: '';
-    position: absolute;
-    left: 0;
-}
-
-.nav-open .nav { transform: translateY(15%); }
-.nav-open .nav__button { transform: rotate(45deg); }
-.nav-open .nav__button::before { opacity: 0; }
+/* ------ drop down menu actions -------*/
+.nav-open .nav__menu { transform: translateY(15%); }
+.nav-open .nav__icon { transform: rotate(45deg); }
+.nav-open .nav__icon::before { opacity: 0; }
+/* ------------------------------------ */
