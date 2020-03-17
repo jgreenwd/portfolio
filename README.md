@@ -1,2 +1,2 @@
 # portfolio
-[Web Development Portfolio](jgreenwd.github.io/portfolio)
+[Web Development Portfolio](https://jgreenwd.github.io/portfolio)
