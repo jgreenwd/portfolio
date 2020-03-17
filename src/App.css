@@ -111,7 +111,7 @@ a { color: var(--clr-primary); }
 
 .content {
     background: var(--clr-light);
-    opacity: 75%;
+    opacity: 0.75;
     padding: 3em;
     width: 70vw;
 }
@@ -121,7 +121,7 @@ a { color: var(--clr-primary); }
     background-repeat: no-repeat;
     background-size: 80px 48px;
     background-position: center;
-    opacity: 90%;
+    opacity: 0.9;
     color: var(--clr-light);
     font-size: 0.75em;
     margin-top: 60px;
