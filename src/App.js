@@ -1,14 +1,5 @@
 import React from 'react';
 import './App.css';
-import logo from './media/logo2b.png';
-import sprite from './media/sprite.png';
-
-const imageStyle = {
-    backgroundImage: `linear-gradient(rgba(0,0,0,0.75), rgba(255,255,255,0.2), rgba(10,10,10,0.85)), url(${logo})`,
-    backgroundRepeat: 'no-repeat',
-    width: '640px',
-    height: '120px'
-};
 
 function App() {
     return (
@@ -45,8 +36,7 @@ function App() {
             </aside>
 
             <footer className="footer">
-                <img style={imageStyle} className="logo" src={sprite} alt="logo"/>
-                <p>Copyright © 2020 J. Greenwood</p>
+                <span>Copyright © 2020 J. Greenwood</span>
             </footer>
         </div>
     );
