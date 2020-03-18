@@ -160,7 +160,7 @@ a { color: var(--clr-primary); }
     background: var(--clr-light);
     box-shadow: 0 0 3em rgba(0,0,0,.15);
     height: 250px;
-    position: fixed;
+    position: absolute;
     transition: transform 300ms;
 }
 
