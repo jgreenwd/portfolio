@@ -39,11 +39,11 @@ function App() {
 
             <footer className="footer">
                 <a href="https://github.com/jgreenwd/" style={{}}>
-                    <img src={github} alt="GitHub link" style={{width: '50px', height: '50px', float: 'left', marginRight: '5px'}} />
+                    <img src={github} alt="GitHub link" style={{opacity: '0.75', width: '50px', height: '50px', float: 'left', marginRight: '5px'}} />
                 </a>
                 <span style={{whiteSpace: 'nowrap'}}>Copyright © 2020 J. Greenwood</span>
                 <a href="https://linkedin.com/in/jeremy-greenwood/">
-                    <img src={linkedin} alt="LinkedIn link" style={{width: '60px', height: '50px', float: 'right', marginLeft: '5px'}}/>
+                    <img src={linkedin} alt="LinkedIn link" style={{opacity: '0.75', width: '60px', height: '50px', float: 'right', marginLeft: '5px'}}/>
                 </a>
             </footer>
         </div>
