@@ -19,6 +19,8 @@ a { color: var(--clr-primary); }
 
 /* define media queries for resolutions: <640px, 640-1000px, >1000px */
 @media only screen and (max-width: 639px) {
+    .header { width: 99.9vw; }
+
     .nav__icon,
     .nav__icon::before,
     .nav__icon::after {
@@ -40,6 +42,8 @@ a { color: var(--clr-primary); }
 }
 
 @media only screen and (min-width: 640px) and (max-width: 1000px) {
+    .header { width: 90vw; }
+
     .nav__icon,
     .nav__icon::before,
     .nav__icon::after {
@@ -64,6 +68,7 @@ a { color: var(--clr-primary); }
 }
 
 @media only screen and (min-width: 1001px) {
+    .header { width: 75vw; }
     .nav__toggle { margin-left: 30px; }
 
     .nav__icon,
@@ -105,7 +110,6 @@ a { color: var(--clr-primary); }
 .header {
     position: sticky;
     top: 0;
-    width: 80vw;
     z-index: 1;
 }
 
