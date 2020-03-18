@@ -125,8 +125,13 @@ a { color: var(--clr-primary); }
     color: var(--clr-light);
     font-size: 0.75em;
     margin-top: 60px;
-    min-height: 72px;
     line-height: 72px;
+
+    display: flex;
+    align-items: center;
+    /* position: relative; */
+    /* height: 100%; */
+
 }
 
 /* ----- nav bar hamburger button ----- */
