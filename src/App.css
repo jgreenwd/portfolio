@@ -20,6 +20,7 @@ a { color: var(--clr-primary); }
 /* define media queries for resolutions: <640px, 640-1000px, >1000px */
 @media only screen and (max-width: 639px) {
     .header { width: 99.9vw; }
+    .footer { margin-top: 50px; }
 
     .nav__icon,
     .nav__icon::before,
@@ -43,6 +44,7 @@ a { color: var(--clr-primary); }
 
 @media only screen and (min-width: 640px) and (max-width: 1000px) {
     .header { width: 90vw; }
+    .footer { margin-top: 100px; }
 
     .nav__icon,
     .nav__icon::before,
@@ -69,6 +71,7 @@ a { color: var(--clr-primary); }
 
 @media only screen and (min-width: 1001px) {
     .header { width: 950px; }
+    .footer { margin-top: 200px; }
     .nav__toggle { margin-left: 30px; }
 
     .nav__icon,
@@ -128,7 +131,7 @@ a { color: var(--clr-primary); }
     opacity: 0.75;
     color: var(--clr-light);
     font-size: 0.75em;
-    margin-top: 60px;
+    
     line-height: 72px;
 
     display: flex;
