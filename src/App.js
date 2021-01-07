@@ -42,7 +42,7 @@ function App() {
                             <span className="nav__link" onClick={ () => setSelection(3)}>{app_refs[3].title}</span>
                         </li>
                         <li className="nav__item">
-                            <span className="nav__link" onClick={ () => setSelection(4)}>{app_refs[3].title}</span>
+                            <span className="nav__link" onClick={ () => setSelection(4)}>{app_refs[4].title}</span>
                         </li>
                     </ul>
                 </nav>
