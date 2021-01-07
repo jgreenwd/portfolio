@@ -1,0 +1,14 @@
+.memory_closed {
+  background-image: radial-gradient(circle, white, rgba(0,0,0,0.75));
+  font-size: 0;
+}
+
+.memory_opened {
+  background-image: radial-gradient(circle, white, rgba(0,0,0,0.75));
+  font-size: 3.9em;
+}
+
+.memory_matched {
+  background-image: radial-gradient(circle, white, rgba(10,50,220,0.9));
+  font-size: 3.9em;
+}
