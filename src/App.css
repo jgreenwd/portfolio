@@ -131,7 +131,6 @@ a { color: var(--clr-primary); }
     background-repeat: no-repeat;
     background-size: 80px 48px;
     background-position: center;
-    /* opacity: 0.85; */
     color: var(--clr-light);
     font-size: 0.75em;
     line-height: 72px;
@@ -170,7 +169,6 @@ a { color: var(--clr-primary); }
 .nav__menu {
     background: var(--clr-light);
     box-shadow: 0 0 3em rgba(0,0,0,.15);
-    height: 250px;
     position: absolute;
     transition: transform 300ms;
 }
