@@ -8,7 +8,7 @@ const app_refs = [
     {'title': 'Musician Cards', 'url': "https://jgreenwd.github.io/musician-cards"},
     {'title': 'Playing Cards', 'url': "https://jgreenwd.github.io/playing-cards"},
     {'title': 'Matching Game', 'url': "https://jgreenwd.github.io/matching-game"},
-    {'title': 'About', 'url': "https://jgreenwd.github.io/portfolio/about"}
+    {'title': 'About', 'url': "https://jgreenwd.github.io/about/about"}
 ]
 
 function App() {
