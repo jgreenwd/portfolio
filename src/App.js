@@ -4,7 +4,7 @@ import github from './media/GitHub-Mark-Light-120px-plus.png';
 import LinkedIn from './media/LI-In-Bug.png';
 
 const app_refs = [
-    {'title': 'Home', 'url': "https://jgreenwd.github.io/home"},
+    {'title': 'Home', 'url': "https://jgreenwd.github.io/home/"},
     {'title': 'Musician Cards', 'url': "https://jgreenwd.github.io/musician-cards"},
     {'title': 'Playing Cards', 'url': "https://jgreenwd.github.io/playing-cards"},
     {'title': 'Matching Game', 'url': "https://jgreenwd.github.io/matching-game"},
